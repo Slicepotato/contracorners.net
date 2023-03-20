@@ -85,6 +85,12 @@ add_action( 'rest_api_init', 'create_ACF_meta_in_REST' );
 
 add_theme_support( 'post-thumbnails' ); 
 
+function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
+}
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+
 add_action( 'rest_api_init', 'add_post_thumbnail_to_JSON' );
 function add_post_thumbnail_to_JSON() {
     //Add featured image
@@ -117,4 +123,9 @@ function get_image_src( $object, $field_name, $request ) {
 }
 
 add_filter( 'big_image_size_threshold', '__return_false' );
+
+function add_categories_to_pages() {
+    register_taxonomy_for_object_type( 'category', 'page' );
+}
+add_action( 'init', 'add_categories_to_pages' );
 ?>

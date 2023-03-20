@@ -4681,16 +4681,18 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400; }
 
-path {
-  stroke: white;
-  fill: paleturquoise !important;
+.map-panel path {
+  stroke: #ffffff;
+  fill: #9BB48B;
   transition: fill .4s ease; }
-
-path:hover {
-  fill: orange !important; }
+  .map-panel path:hover, .map-panel path:focus {
+    fill: #BDD89D; }
 
 .map-ui {
   display: block; }
+  .map-ui svg {
+    width: 100%;
+    height: 100%; }
 
 #details-box {
   padding: 1rem;
@@ -4817,15 +4819,12 @@ path:hover {
 
 html, body {
   width: 100%;
-  font-family: "Roboto", sans-serif;
-  background: url("img/patterns/page_bg-pattern.png") center center transparent; }
+  font-family: "Roboto", sans-serif; }
 
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem 2rem;
   background-color: #ffffff; }
 
-.map-ui svg {
-  width: 100%;
-  height: 100%; }
+.attachment-post-thumbnail {
+  max-width: 100%; }
