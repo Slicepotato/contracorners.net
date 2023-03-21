@@ -11,12 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Production Sync
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./${{ secrets.THEME_NAME }}/
+          local-dir: ./
           server-dir: contracorners.net/wp-content/themes/${{ secrets.THEME_NAME }}/
           protocol: ftp
           security: loose
