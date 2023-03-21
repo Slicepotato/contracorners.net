@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./${{ secrets.THEME_NAME }}/
-          server-dir: ${{ secrets.FTP_SERVER }}/wp-content/themes/${{ secrets.THEME_NAME }}/
+          server-dir: contracorners.net/wp-content/themes/${{ secrets.THEME_NAME }}/
           protocol: ftp
           security: loose
           port: 21
