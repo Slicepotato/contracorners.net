@@ -137,4 +137,12 @@ add_filter('evo_event_type_count','this_ajdecount',10,1);
 function this_ajdecount($count){
 	return 50;
 }
+
+// Prevent WP from adding <p> tags on all post types
+function disable_wp_auto_p( $content ) {
+    remove_filter( 'the_content', 'wpautop' );
+    remove_filter( 'the_excerpt', 'wpautop' );
+    return $content;
+}
+add_filter( 'the_content', 'disable_wp_auto_p', 0 );
 ?>
