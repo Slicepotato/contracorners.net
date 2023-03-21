@@ -2,16 +2,9 @@
 
 <?php
     $args = array(
-        'post_type' => 'page',
+        'post_type' => 'states',
         'posts_per_page' => -1,
-        'post_status' => array('publish', 'private'),
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'category',
-            'field'    => 'slug',
-            'terms'    => array('states')
-          )
-        )
+        'post_status' => array('publish'),
       );
       
       $all_pages = new WP_Query($args);
@@ -28,8 +21,8 @@
 	sodipodi:docname="United States WIP.svg"
 	xmlns="http://www.w3.org/2000/svg" 
 	xmlns:xlink="http://www.w3.org/1999/xlink" 
-	x="0px" y="0px" viewBox="0 0 959 593"
-	style="enable-background:new 0 0 959 593;"
+	x="0px" y="0px" viewBox="0 0 950 600"
+	preserveAspectRatio="xMinYMin meet"
 	id="us-map"
 	class="map-panel"
 	xml:space="preserve">
@@ -48,7 +41,8 @@
             $state_short_name = get_field('state_name', $id);
             $state_name = $state_field['choices'][ $state_short_name ];
             $shape_coordinates = get_field('shape_coordinates', $id);
-            $page_url = get_field('page_url', $id);       
+            $page_url = get_field('page_url', $id); 
+
 ?>
     <a xlink:href="<?php echo $page_url; ?>">
         <path 

@@ -3,19 +3,31 @@ jQuery(document).ready(function($){
 
     document.addEventListener('mouseover', function (e) {
     if (e.target.tagName == 'path') {
-        var content = e.target.dataset.name;
+        let content = e.target.dataset.name;
         detailsBox.innerHTML = content;
-        detailsBox.style.opacity = "100%";
+        detailsBox.classList.add('show');
     }
     else {
-        detailsBox.style.opacity = "0%";
+        detailsBox.classList.remove('show');
     }
     });
 
     window.onmousemove = function (e) {
-    var x = e.clientX,
+    let x = e.clientX,
         y = e.clientY;
-    detailsBox.style.top = (y + 20) + 'px';
-    detailsBox.style.left = (x) + 'px';
-    };    
+        detailsBox.style.top = (y + 20) + 'px';
+        detailsBox.style.left = (x) + 'px';
+    };  
+    
+    $('.menu-item').on('click', 'a', function() {
+        $(this).next('.sub-menu').toggleClass('show');
+    });
+
+    $('#state_select').on('change', function () {
+        var url = $(this).val(); // get selected value
+        if (url) { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });
 });

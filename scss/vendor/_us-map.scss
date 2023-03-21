@@ -1,7 +1,7 @@
 .map-panel {
     path {
         stroke: $wht;
-        fill: $med-green;
+        fill: $drk-green;
         transition: fill .4s ease;
 
         &:hover, &:focus {
@@ -17,6 +17,7 @@
 }
 
 #details-box {
+    display: none;
     padding: 1rem;
     border-radius: 8px;
     font-size: 24px;
@@ -27,4 +28,8 @@
     transform: translateX(-50%);
     transition: opacity .4s ease;
     z-index: 1;
+
+    &.show {
+        display: block;
+    }
 }

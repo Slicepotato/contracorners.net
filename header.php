@@ -30,24 +30,13 @@
 		<?php wp_head(); ?>
 	</head>
     <body <?php body_class(); ?>>
-    
+        <div class="page-wrapper">
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <div class="main-container content">
-        <!-- header -->
-        <header class="header clear" role="banner">
-            <div class="upper">
-                <div class="content-wrap">
-                            <!-- logo -->
-                    <?php if(is_active_sidebar('logo')){ dynamic_sidebar('logo'); } ?>
-                            <!-- /logo -->
-
-                            <!-- nav -->
-                    <button type="button" id="nav-toggle"><i class="fa fa-navicon"></i></button>
-                    <nav class="nav" role="navigation">
-                        <?php wp_nav_menu(); ?>
-                    </nav>
-                </div>
-                            <!-- /nav -->
-            </div>
-        </header>
-        <!-- /header -->
+        <div class="main-container">
+            <div class="content-wrap">
+                <header class="header" role="banner">
+                    <div class="upper">
+                        <?php get_template_part('partials/logo', 'component'); ?>
+                        <?php get_template_part('partials/nav', 'component'); ?>
+                    </div>
+                </header>

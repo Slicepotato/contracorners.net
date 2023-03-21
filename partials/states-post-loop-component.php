@@ -1,12 +1,11 @@
-<?php get_header(); ?>
+<div id="primary">
+    <?php 
+        if ( has_post_thumbnail() ) {
+            the_post_thumbnail();
+        }
+    ?>
 
-    <div id="dance-map" class="map-ui">
-        <?php get_template_part('partials/us-map', 'component'); ?>
-    </div>
-
-	<div id="primary">
-
-	<section class="inner content-wrap" >
+	<section class="inner" >
 
 	<?php 
             // Default Post Loop --
@@ -21,5 +20,3 @@
 	</section> <!-- /.inner -->
 
 </div> <!-- /#primary -->
-
-<?php get_footer(); ?>
