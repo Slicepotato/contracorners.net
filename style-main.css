@@ -7966,7 +7966,8 @@ html, body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   min-width: unset;
-  background-color: #3a614c; }
+  background-color: #3a614c;
+  height: 100%; }
 
 hr {
   margin: 1rem 0; }
