@@ -29,10 +29,10 @@
                     <hr />
 
 					<?php 
-						$eventtop_style = EVO()->cal->get_prop('evosm_eventtop_style','evcal_1') == 'white'? '0':'2';
+						$eventtop_style = 5;
 						
 						$shortcode = apply_filters('evo_tax_archieve_page_shortcode', 
-							'[add_eventon_list number_of_months="5" '.$tax.'='.$term->term_id.' hide_mult_occur="no" hide_empty_months="yes" lang="'.$lang.'" eventtop_style="'. $eventtop_style.'"]', 
+							'[add_eventon_list number_of_months="12" '.$tax.'='.$term->term_id.' hide_mult_occur="no" hide_empty_months="yes" lang="'.$lang.'" eventtop_style="'. $eventtop_style.'" event_past_future="future"]', 
 							$tax,
 							$term->term_id
 						);
