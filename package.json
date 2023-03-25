@@ -4,7 +4,9 @@
         "nodemon": "^2.0.12"
     },
     "scripts": {
-        "build-css": "node-sass --include-path scss ./scss/style.scss   ./style.css",
-        "watch-css": "nodemon -e scss -x \"npm run build-css\""
+        "build-css": "node-sass --include-path scss ./scss/style.scss   ./style-main.css",
+        "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+        "build-login-css": "node-sass --include-path scss ./scss/login.scss   ./style-login.css",
+        "watch-login-css": "nodemon -e scss -x \"npm run build-login-css\""
     }
 }

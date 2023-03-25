@@ -14,7 +14,7 @@ Text Domain: codemjohnson
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,700&Roboto+Slab:wght@300;400;600&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -7968,6 +7968,15 @@ html, body {
   min-width: unset;
   background-color: #3a614c; }
 
+hr {
+  margin: 1rem 0; }
+
+.h1 {
+  font-family: "Roboto-Slab", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem; }
+
 .h2 {
   font-size: 2rem; }
   .h2--bold {
@@ -8057,6 +8066,9 @@ html, body {
 
 .attachment-post-thumbnail {
   max-width: 100%; }
+
+.tax_term_description {
+  line-height: 1.25rem; }
 
 @media screen and (min-width: 770px) {
   .nav-mobile {
