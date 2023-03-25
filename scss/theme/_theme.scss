@@ -6,6 +6,17 @@ html, body {
     // background: url('img/patterns/page_bg-pattern.png') center center transparent;
 }
 
+hr {
+    margin: 1rem 0;
+}
+
+.h1 {
+    font-family: $roboto-slab;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0.5rem 0 1rem;
+}
+
 .h2 {
     font-size: 2rem;
 
@@ -130,6 +141,10 @@ html, body {
 
 .attachment-post-thumbnail {
     max-width: 100%;
+}
+
+.tax_term_description {
+    line-height: 1.25rem;
 }
 
 // 770px
